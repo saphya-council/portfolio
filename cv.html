@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio Site</title>
+  <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/>
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type='text/javascript' src='script.js'></script>
+  <meta name="viewport" content="width=device-width">
+  <style>
+	article p{
+		color:#A8676B;
+	}
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">LOGO GOES HERE</a></h1>
+    <h2>saphya monet council</h2>
+	<button onclick="openMenu();" id="hamburger">&#9776;</button>
+	<button onclick="closeMenu();" id="cross">&#735;</button>
+	<div id="menu">
+		<p>Welcome to my site! I am an aspiring sound designer, audio engineer, music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<ul style = "list-style-type: none">
+		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
+		  <li id ="pages"><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+	<script>
+		
+		document.getElementById('menu').style.display = 'none';
+		document.getElementById('cross').style.display = 'none';
+		document.getElementById('hamburger').style.display = 'none';
+		//$(window).resize(function(){
+			if($(this).width() <= 640){
+				document.getElementById('hamburger').style.display = 'block';
+		
+				function openMenu(){
+					console.log('clicked');
+					document.getElementById('menu').style.display = 'block';
+					document.getElementById('cross').style.display = 'block';
+					document.getElementById('hamburger').style.display = 'none';
+				}
+				function closeMenu(){
+					document.getElementById('menu').style.display = 'none';
+					document.getElementById('cross').style.display = 'none';
+					document.getElementById('hamburger').style.display = 'block';
+				}
+			} else {
+				document.getElementById('menu').style.display = 'none';
+				document.getElementById('cross').style.display = 'none';
+				document.getElementById('hamburger').style.display = 'none';
+			}
+		//});
+	</script>
+  </header>
+	<div id = 'main_content'>
+		<div id="downloads">
+			<div id="cv">
+				<a href="pdf_files/saphyacv.pdf" target="_blank"><img src="pdflogo.png"></img></a>
+				<p>CV</p>
+			</div>
+			<div id="resume">
+				<a href="pdf_files/saphyaresume.pdf" target="_blank"><img src="pdflogo.png"></img></a>
+				<p>Resume</p>
+			</div>
+		</div>
+	  <article>
+		<section id = "background" style = "text-align: left; overflow-y: scroll; max-height: 475px;">
+		  <h3>PROFILE:</h3>
+<p>	Motivated, self-driven B.S. candidate with demonstrated creative and technical achievements in sound and game design (including 3d modeling, materials drawing, and component scripting)</p>
+<p>	Advanced knowledge of database technology and asset management</p>
+<p>	Programming in Javascript, C/C++, C#, Java, Python, Max/MSP, HTML/CSS</p>
+<br>
+<h3>EDUCATION:</h3>   
+	<p>New York University Shanghai, Shanghai, P.R. China (GPA: 3.53/4.0)</p>
+	<p>B.S. Interactive Media Arts, May 2017 (expected), GPA: 3.8/4.0</p>
+	<p>Relevant Coursework: Interaction Lab, Sound & Vision, Sound Design for Media, Recording Technology</p>
+	<p>Awards: Autodesk Smart Home Design Challenge ’15 Honorable Mention, Dean’s Service Scholar ‘15, NYUSH	Hackathon ‘14 Honorable Mention</p>
+<br>
+<h3>RESEARCH INTERESTS:</h3>					
+<p>	Professional audio tool development</p>
+<p>	Audio signal processing theory and application</p>
+<p>	Natural language processing</p>
+<br>
+
+<h3>WORK EXPERIENCE:</h3>
+<br><h4>New York University Shanghai, Shanghai, P.R. China</h4>
+<h4>ICP Learning Assistant, Feb – May 2017</h4>
+<p>Attend lecture and recitation and work closely with faculty and Global Academic Fellows to support students as they work on class assignments. Host individual and small group tutoring in the Academic Resource Center. Maintain regular communication regarding student progress with advisor and supervisor.</p>
+<br>
+<h4>MK Studios, Shanghai, P.R. China</h4>
+<h4>Studio Technician/Assistant, Oct – present</h4> 
+<p>Engineered working prototypes of two assigned art installations using commissioned parts. Designed professional schematics of unique parts for projects. Found new solutions to making the projects function by introducing alternative mechanisms. Assisted artist in the procurement of resources and the production of stable mock-ups.<p>
+<br>
+<h4>New York University Shanghai, Shanghai, P.R. China</h4>
+<h4>IMA Lab Student Worker, Feb – May 2015, Sep – Dec 2016</h4>
+<p>Provided support to IMA professors by loaning out equipment to students and overseeing recitations. Edited and narrated tutorial videos for IMA equipment to then post on the class site. Took inventory and updated the IMA equipment online database. Monitored the lab and organized the room in time for lab closing. Served as a moderator for special events hosted by IMA, e.g. Barcamp ’15 –a fun, user-generated tech conference.</p>
+<br>
+<h4>Urban Legends Project, Manhattan, NY, USA</h4> 
+<h4>Creative Assistant Summer 2016</h4>
+<p>Translated Mandarin Chinese movie scripts into English. Assisted Taiwanese short film director in coming up with original horror film plots.</p>
+<br>
+<h4>HDtracks, Manhattan, NY, USA</h4>
+<h4>Music Business Intern Spring 2016</h4>
+<p>Audited company site to ensure easy, hassle-free browsing. Various administrative duties like data entry and packaging mail. Burned CDs and updated music database.</p>
+<br>
+<h4>WNYU, Manhattan, NY, USA</h4>
+<h4>Radio Show Host/Disc Jockey October 2015 – April 2016</h4>
+<p>Came up with an original idea for a music show and composed weekly playlists to then play live on .org radio. Used studio equipment to transition between talking (backtracking, reading PSAs, etc.) and playing tracks.</p>
+<br>
+<h4>Bailey Blues, Brooklyn, NY, USA</h4>
+<h4>Marketing Intern Fall 2015</h4>
+<p>Made spreadsheets for artist tour dates. Answered phones, office upkeep, sign for mail. Designed graphics for upcoming tours and communicate with fans via social media.</p>
+<br>
+<h4>The Korea Society, Manhattan, NY, USA</h4>
+<h4>Korean Studies Graphic Design Intern Summer 2015</h4>
+<p>Designed flyers, postcards, banners and other promotional materials for upcoming programs. Edited videos to then post on department site. Hosted domestic and international guests to ensure time spent at The Korea Society is above satisfactory.</p>
+
+	  </article>
+	  <aside>
+		<h4>ABOUT ME</h4>
+		<br>
+		<p>Welcome to my site! I am an aspiring sound designer, audio engineer, music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<ul style = "list-style-type: none">
+		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
+		  <br>
+		  <li id ="pages"><a href="contact.html">Contact</a></li>
+		</ul>
+		<br>
+		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
+        
+		</a></p>
+		<div style="text-align: center">
+		<p >Download Links:</p>
+		<ul style = "list-style-type: none">
+			<li>CV</li>
+			<li><a href="pdf_files/saphyacv.pdf" target="_blank"><img src="pdflogo.png"></a></li>
+			<li>Resume</li>
+			<li><a href="pdf_files/saphyaresume.pdf" target="_blank"><img src="pdflogo.png"></a></li>
+		</ul>
+		</div>
+	  </aside>
+	</div>
+	<footer>
+		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
+        
+		</a></p>
+	</footer>
+</body>
+</html>

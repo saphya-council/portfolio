@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio Site</title>
+  <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/>
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <style>
+	input, textarea{
+		width: 100%;
+	}
+	body{
+		font-family:monospace;
+	}
+	
+	#name, #email, #message{
+		background-color: #A8676B;
+		color: #FCFFFF;
+		display: block;
+		font-family: monospace;
+	}
+	textarea{
+		height: 300px;
+	}
+	#submit_container{	
+		padding-top: 3em;
+	}
+	#submit, #button{
+		display: block;
+		background-color:black;
+		color: #FCFFFF;
+		font-family: monospace;
+	}
+	li {
+		list-style:none;
+		color: #FCFFFF;
+		font-family: monospace;
+	}
+	label {
+		width: 100%;
+		display: block;
+		text-align: left;
+	}
+  </style>
+  <script>
+	function validateForm(){
+		console.log("submit");
+		$('#name').css('background-color','#A8676B');
+		$('#email').css('background-color','#A8676B');
+		$('#message').css('background-color','#A8676B');
+		var formHasError = false;
+		if ($('#name').val() == "") {
+			$('#name').css('background-color','#4D9C2D');
+			formHasError = true;
+		}
+		if ($('#email').val() == "") {
+			$('#email').css('background-color','#4D9C2D');
+			formHasError = true;
+		}
+		if ($('#message').val() == "") {
+			$('#message').css('background-color','#4D9C2D');
+			formHasError = true;
+		}
+		if (!formHasError) {
+			saveForm();
+		}
+	}
+	function saveForm(){
+		var name = $('#name').val();
+		var email = $('#email').val();
+		var message = $('#message').val();
+		console.log(name+' '+email);
+		
+		localStorage.name = name;
+		localStorage.email = email;
+			
+		alert("Thank you!");
+		
+		var myEmail = 'saphya.monet@gmail.com';
+		window.location.href='mailto:'+myEmail+'?subject'+name+'&cc='+email+'&body='+message;
+		
+		$('#name').val('');
+		$('#email').val('');
+		$('#message').val('');
+		
+		console.log(localStorage.name+' '+localStorage.email);
+		
+		
+		//showSaved();
+	}
+/*	
+	function showSaved() {
+		console.log("showSaved");
+		console.log(localStorage.name+' '+localStorage.email);
+		
+		$(document).ready(function(){
+			$('#records').html(''); //empties out the records list
+			if($(localStorage.name != undefined){
+				$('#records').append('<li>'+localStorage.name+'</li>');
+				$('#records').append('<li>'+localStorage.email+'</li>');
+			});
+		});
+	}
+	
+	function clearSaved(){
+		localStorage.removeItem('name');
+		localStorage.removeItem('email');
+		showSaved();
+	}
+	*/
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type='text/javascript' src='script.js'></script>
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <header>
+    <h1 ><a href="index.html">LOGO GOES HERE</a></h1>
+    <h2>saphya monet council</h2>
+	<button onclick="openMenu();" id="hamburger">&#9776;</button>
+	<button onclick="closeMenu();" id="cross">&#735;</button>
+	<div id="menu">
+		<p>Welcome to my site! I am an aspiring sound designer, audio engineer, music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<ul style = "list-style-type: none">
+		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
+		  <li id ="pages"><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+	<script>
+		
+		document.getElementById('menu').style.display = 'none';
+		document.getElementById('cross').style.display = 'none';
+		document.getElementById('hamburger').style.display = 'none';
+		//$(window).resize(function(){
+			if($(this).width() <= 640){
+				document.getElementById('hamburger').style.display = 'block';
+		
+				function openMenu(){
+					console.log('clicked');
+					document.getElementById('menu').style.display = 'block';
+					document.getElementById('cross').style.display = 'block';
+					document.getElementById('hamburger').style.display = 'none';
+				}
+				function closeMenu(){
+					document.getElementById('menu').style.display = 'none';
+					document.getElementById('cross').style.display = 'none';
+					document.getElementById('hamburger').style.display = 'block';
+				}
+			} else {
+				document.getElementById('menu').style.display = 'none';
+				document.getElementById('cross').style.display = 'none';
+				document.getElementById('hamburger').style.display = 'none';
+			}
+		//});
+	</script>
+  </header>
+  <div id="main_content">
+	<article>
+		<form onSubmit ="validateForm(); return false">
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name">
+			<br>
+			<label for="email">E-mail</label>
+			<input type="text" id="email" name="email">
+			<br>
+			<label for="message">Message</label>
+			<div id = "textbox">
+			<textarea type="text" id="message" name="message" maxlength="250"></textarea>
+			</div>
+			<div id="submit_container"><input type="submit" id="submit"></div>
+		</form>
+	</article>
+	<aside>
+	<h4>ABOUT ME</h4>
+	<br>
+		<p>Welcome to my site! I am an aspiring sound designer, audio engineer, music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<ul style = "list-style-type: none">
+		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
+		  <br>
+		  <li id ="pages"><a href="contact.html">Contact</a></li>
+		</ul>
+		<br>
+		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
+        
+		</a></p>
+		<div style="text-align: center">
+		<p >Download Links:</p>
+		<ul style = "list-style-type: none">
+			<li>CV</li>
+			<li><a href="pdf_files/saphyacv.pdf" target="_blank"><img src="pdflogo.png"></a></li>
+			<li>Resume</li>
+			<li><a href="pdf_files/saphyaresume.pdf" target="_blank"><img src="pdflogo.png"></a></li>
+		</ul>
+		</div>
+	  </aside>
+	<!--<hr />
+	<ul id='records'>
+		<script>
+			showSaved();
+		</script>
+	</ul>
+	<button type='button' onClick="clearSaved()">Clear</button>-->
+	</div>
+	<footer>
+		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
+        
+		</a></p>
+	</footer>
+</body>
+</html>

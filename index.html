@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio Site</title>
+  <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/>
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type='text/javascript' src='script.js'></script>
+  <meta name="viewport" content="width=device-width">
+  <style>
+	#myModal {
+		display: none;
+		height: 100%;
+		width:100%;
+		z-index: 1;
+	}
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">LOGO GOES HERE</a></h1>
+    <h2>saphya monet council</h2>
+	<button onclick="openMenu();" id="hamburger">&#9776;</button>
+	<button onclick="closeMenu();" id="cross">&#735;</button>
+	<div id="menu">
+		<p>Welcome to my site! I am an aspiring sound designer, audio engineer, music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<ul style = "list-style-type: none">
+		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
+		  <li id ="pages"><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+	<script>
+		
+		document.getElementById('menu').style.display = 'none';
+		document.getElementById('cross').style.display = 'none';
+		document.getElementById('hamburger').style.display = 'none';
+		//$(window).resize(function(){
+			if($(this).width() <= 640){
+				document.getElementById('hamburger').style.display = 'block';
+		
+				function openMenu(){
+					console.log('clicked');
+					document.getElementById('menu').style.display = 'block';
+					document.getElementById('cross').style.display = 'block';
+					document.getElementById('hamburger').style.display = 'none';
+				}
+				function closeMenu(){
+					document.getElementById('menu').style.display = 'none';
+					document.getElementById('cross').style.display = 'none';
+					document.getElementById('hamburger').style.display = 'block';
+				}
+			} else {
+				document.getElementById('menu').style.display = 'none';
+				document.getElementById('cross').style.display = 'none';
+				document.getElementById('hamburger').style.display = 'none';
+			}
+		//});
+	</script>
+  </header>
+	<div id = 'main_content'>
+	  <article>
+		<section>
+		  <ul id="nav">
+			<li><a href="#">2014</a></li>
+			<li><a href="#">2015</a></li>
+			<li><a href="#">2016</a></li>
+			<li><a href="#">2017</a></li>
+		  </ul>
+		</section>
+		<section class="thumbs">
+			<div id="myModal1" class="w3-modal">
+				<span onclick="closeModal(1);" style="cursor:pointer">×</span>
+				<div class="w3-modal-content">
+					<img src="images/sfx_head.jpg" alt="Monkey Thumnail"/>
+					<p>I'm a zombie!</p>
+				</div>
+			</div>
+			<!--<h3>Photos!</h3>-->
+			<img id = "image1" src="images/sfx_head.jpg" alt="Monkey Thumnail" onclick="openModal(1);"/>
+			<img id = "image2" src="https://s-media-cache-ak0.pinimg.com/736x/9c/3f/cf/9c3fcf249124eee74a92bf48d4a2705c.jpg" alt="Monkey Thumnail" onclick="openModal(2);"/>
+			<img id = "image3" src="https://i.giphy.com/10ECejNtM1GyRy.gif" onclick="openModal(3);"/>
+			<img id = "image4" src="http://i3.kym-cdn.com/photos/images/newsfeed/000/674/934/422.jpg" onclick="openModal(4);"/>
+			
+			
+			<script>
+				function openModal(x) {
+				  var modal = document.getElementById('myModal'+x);
+				  modal.style.display = "block"; 
+				  //var picture = document.getElementById('image'+x).cloneNode(true);
+				  //modal.appendChild(picture);
+				}
+				
+				function closeModal(x) {
+					var modal = document.getElementById('myModal'+x);
+					modal.style.display = "none";
+				}
+				/*
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}*/
+				/*
+				function closeModal() {
+				  var modal = document.getElementById('myModal');
+				  modal.removeChild(modal.lastChild);
+				  document.getElementById('myModal').style.display = "none";
+				}*/
+			</script>
+		</section>
+	  </article>
+	  <aside>
+		<h4>ABOUT ME</h4>
+		<br>
+		<p>Welcome to my site! I am an aspiring sound designer, audio engineer, music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<ul style = "list-style-type: none">
+		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
+		  <br>
+		  <li id ="pages"><a href="contact.html">Contact</a></li>
+		</ul>
+		<br>
+		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
+        
+		</a></p>
+		<div style="text-align: center">
+		<p >Download Links:</p>
+		<ul style = "list-style-type: none">
+			<li>CV</li>
+			<li><a href="pdf_files/saphyacv.pdf" target="_blank"><img src="pdflogo.png"></a></li>
+			<li>Resume</li>
+			<li><a href="pdf_files/saphyaresume.pdf" target="_blank"><img src="pdflogo.png"></a></li>
+		</ul>
+		</div>
+	  </aside>
+	</div>
+	<footer>
+		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
+        
+		</a></p>
+	</footer>
+</body>
+</html>
