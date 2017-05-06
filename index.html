@@ -24,10 +24,10 @@
   <header>
     <h1><a href="index.html">LOGO GOES HERE</a></h1>
     <h2>saphya monet council</h2>
-	<button onclick="openMenu();" id="hamburger">&#9776;</button>
+	<button onclick="openMenu();" id="hamburger"><h4>menu</h4></button>
 	<button onclick="closeMenu();" id="cross">&#735;</button>
 	<div id="menu">
-		<p>Welcome to my site! I am an aspiring sound designer, audio engineer, music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<p>Welcome to my site! I am an aspiring music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
 		<ul style = "list-style-type: none">
 		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
 		  <li id ="pages"><a href="contact.html">Contact</a></li>
@@ -65,93 +65,19 @@
 	  <article>
 		<section>
 		  <ul id="nav">
-			<li><a href="#">2014</a></li>
-			<li><a href="#">2015</a></li>
-			<li><a href="#">2016</a></li>
-			<li><a href="#">2017</a></li>
+			<li><a href="javascript:showAll()">all</a></li>
+			<li><a href="javascript:showGames()">games</a></li>
+			<li><a href="javascript:showApps()">apps</a></li>
+			<li><a href="javascript:showMisc()">misc</a></li>
 		  </ul>
 		</section>
-		<section class="thumbs">
-			<div id="myModal1" class="w3-modal">
-				<span onclick="closeModal(1);" style="cursor:pointer">×</span>
+		<section id="thumbs">
+			<div id="myModal9" class="w3-modal">
+				<button onclick="closeModal(9);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
 				<div class="w3-modal-content">
-					<img src="images/sfx_head.jpg" style="width:75%;height:75%;" alt="zombie head makeup"/>
-					<h4>Introduction to Special Effects Makeup Fall 2015</h4>
-					<p>NYU Tisch</p>
-					<p>A headshot of a zombie makeup I did on a classmate.</p>
-				</div>
-			</div>
-			<img id = "image1" src="images/sfx_head.jpg" alt="zombie head makeup" onclick="openModal(1);"/>
-			<!--
-			<div id="myModal2" class="w3-modal">
-				<span onclick="closeModal(2);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content">
-					<img src="images/20161122_114645.jpg" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);" alt="animatronic; width:100%;height:100%;"/>
-					<p>I'm a robot!</p>
-				</div>
-			</div>
-			<img id = "image2" src="images/20161122_114645.jpg" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);" alt="animatronic" onclick="openModal(2);"/>-->
-			<div id="myModal2" class="w3-modal">
-				<span onclick="closeModal(2);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content">
-					<img style="width:100%;height:100%;" src="images/sfx_hand.jpg" alt="zombie hand makeup"/>
-					<h4>Introduction to Special Effects Makeup Fall 2015</h4>
-					<p>NYU Tisch</p>
-					<p>A burn wound done with silicone, alcohol paint, and gelatin.</p>
-				</div>
-			</div>
-			<img id = "image2" src="images/sfx_hand.jpg" onclick="openModal(2);"/>
-			<div id="myModal3" class="w3-modal">
-				<span onclick="closeModal(3);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content">
-					<img style="width:100%;height:100%;" src="images/Screenshot (232).png" alt="wireframe"/>
-					<h4>Introduction to Web Design and Computer Principles Spring 2016</h4>
-					<p>NYU Gallatin</p>
-					<p>A hypothetical website designed in Adobe Indesign.</p>
-				</div>
-			</div>
-			<img id = "image3" src="images/Screenshot (232).png" onclick="openModal(3);"/>
-			<div id="myModal4" class="w3-modal">
-				<span onclick="closeModal(4);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content">
-					<img style="width:100%;height:100%;" src="https://i.ytimg.com/vi/AYfhK-2dCYY/hqdefault.jpg" alt="selfassembly"/>
-					<a href="https://youtu.be/AYfhK-2dCYY"><h4>Self Assembly</h4></a>
-					<p>A project done for the Sound Design for Media course at NYU Tandon. Three students and myself collaborated on this project, taking an existing piece of work and rehashing it with new sound to elicit a more unsettling and terrifying feeling.</p>
-				</div>
-			</div>
-			<img id = "image4" src="https://i.ytimg.com/vi/AYfhK-2dCYY/hqdefault.jpg" onclick="openModal(4);"/>
-			<div id="myModal5" class="w3-modal">
-				<span onclick="closeModal(5);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content">
-					<img src="images/Game Design Document_slide1.jpg" alt="Game Design Document_slide1"/>
-					<p>"宝贝"/"HATCH"</p>
-					<img src="images/Game Design Document_slide2.jpg" alt="Game Design Document_slide2"/>
-					<p>We realized that the problem with the culture of online dating is that people are less likely to meet in person, which is an issue we hope to rectify through our app.</p>
-					<img src="images/Game Design Document_slide3.jpg" alt="Game Design Document_slide3"/>
-					<p>A combination of Neopets and Tinder, users will match with each other based on common interests in their profiles, thus enacting an event where they must find and foster a pet.</p>
-					<img src="images/Game Design Document_slide4.jpg" alt="Game Design Document_slide4"/>
-					<p>These rules are put in place to establish a serious minded relationship between two people. We want users to use our app as a means for physical interaction, not to prolong virtual discourse.</p>
-					<img src="images/Game Design Document_slide5.jpg" alt="Game Design Document_slide5"/>
-					<p>Users can obtain resources in different places within the academic building to raise their pet. In the cafeteria one can scan for food; in the cafe one can scan for treats; and at any water cooler one can scan for water. The bare necessities. Users are also urged to visit their pet together every now and then to give their pet a love boost.</p>
-					<img src="images/Game Design Document_slide6.jpg" alt="Game Design Document_slide6"/>
-					<img src="images/Game Design Document_slide7.jpg" alt="Game Design Document_slide7"/>
-				</div>
-			</div>
-			<img id = "image5" src="images/Game Design Document_slide1.jpg" onclick="openModal(5);"/>
-			<div id="myModal6" class="w3-modal">
-				<span onclick="closeModal(6);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content">
-					<img src="images/Screenshot (420).png" alt="Screenshot (420)"/>
-					<p>For our assignment on photogrammetry, I took several photos of the service elevator and imported them into Agiscan. I was confused as to why the three-sixty rendered image was blotchy, missing the important details of the environment such as the reflection of light on the metal elevator doors and the area outside the window. Also, when exported, for some reason the 3d model lacked the textures I saw when viewing them in the photogrammetry software.</p>
-					<img src="images/Screenshot (411).png" alt="Screenshot (411)"/>
-					<p>Nonetheless, I wanted to see if I could somehow use what I ultimately ended up with, in my roller ball game. I imagined the elevator as a prop in a dystopian city, a product of a nuclear meltdown that destroyed civilization as we knew it. And, you (the roller ball) as a mouse navigating the ruins of the city. The combination of organic grass and artificial technology of the elevator indicates a cycle of repossession by mother nature, reclaiming her territory and emphasizing her natural superiority to manmade mechanisms.</p>
-					<img src="images/Screenshot (410).png" alt="Screenshot (410)"/>
-				</div>
-			</div>
-			<img id = "image6" src="images/Screenshot (420).png" onclick="openModal(6);"/>
-			<div id="myModal7" class="w3-modal">
-				<span onclick="closeModal(7);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content">
+					<br>
+					<h3>Text Adventure Capstone</h3>
+					<br>
 					<p>For the purpose of experimenting with the Blippar app, I decided to animate Spongebob's face:</p>
 					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" alt="SPONGEBOB_blipp"/>
 					<p>By cropping three faces from this png:</p>
@@ -168,10 +94,121 @@
 					<p>*Update: The Blipbuilder classic and the new Blipbuilder both produce different errors in my gif. Unfortunately I can not have a gif that plays with sound in either</p>
 				</div>
 			</div>
-			<img id = "image7" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" onclick="openModal(7);"/>
+			<img id = "image9" class="games" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" onclick="openModal(9);"/>
+			<div id="myModal1" class="w3-modal">
+				<button onclick="closeModal(1);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				<div class="w3-modal-content">
+					<br>
+					<h3>Zombie Sfx Makeup</h3>
+					<h4>Introduction to Special Effects Makeup Fall 2015</h4>
+					<p>NYU Tisch</p>
+					<br>
+					<img src="images/sfx_head.jpg" style="width:75%;height:75%;" alt="zombie head makeup"/>
+					<p>A headshot of a zombie makeup I did on a classmate.</p>
+					<br>
+					<img style="width:100%;height:100%;" src="images/sfx_hand.jpg" alt="zombie hand makeup"/>
+					<p>A burn wound done with silicone, alcohol paint, and gelatin.</p>
+				</div>
+			</div>
+			<img id = "image1" class="misc" src="images/sfx_head.jpg" alt="zombie head makeup" onclick="openModal(1);"/>
+			<!--
+			<div id="myModal2" class="w3-modal">
+				<span onclick="closeModal(2);" style="cursor:pointer">×</span>
+				<div class="w3-modal-content">
+					<img src="images/20161122_114645.jpg" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);" alt="animatronic; width:100%;height:100%;"/>
+					<p>I'm a robot!</p>
+				</div>
+			</div>
+			<img id = "image2" src="images/20161122_114645.jpg" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);" alt="animatronic" onclick="openModal(2);"/>-->
+			<div id="myModal3" class="w3-modal">
+				<button onclick="closeModal(3);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				<div class="w3-modal-content">
+					<br>
+					<h3>Wireframe</h3>
+					<h4>Introduction to Web Design and Computer Principles Spring 2016</h4>
+					<p>NYU Gallatin</p>
+					<br>
+					<img style="width:100%;height:100%;" src="images/Screenshot (232).png" alt="wireframe"/>
+					<p>A prototype website designed in Adobe Indesign.</p>
+				</div>
+			</div>
+			<img id = "image3" class="misc" src="images/Screenshot (232).png" onclick="openModal(3);"/>
+			<div id="myModal4" class="w3-modal">
+				<button onclick="closeModal(4);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				<div class="w3-modal-content">
+					<br>
+					<h3>Sound Design for Short Film</h3>
+					<br>
+					<img style="width:100%;height:100%;" src="https://i.ytimg.com/vi/AYfhK-2dCYY/hqdefault.jpg" alt="selfassembly"/>
+					<a href="https://youtu.be/AYfhK-2dCYY"><h4>Self Assembly</h4></a>
+					<p>A project done for the Sound Design for Media course at NYU Tandon. Three students and myself collaborated on this project, taking an existing piece of work and rehashing it with new sound to elicit a more unsettling and terrifying feeling.</p>
+				</div>
+			</div>
+			<img id = "image4" class="misc" src="https://i.ytimg.com/vi/AYfhK-2dCYY/hqdefault.jpg" onclick="openModal(4);"/>
+			<div id="myModal5" class="w3-modal">
+				<button onclick="closeModal(5);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				<div class="w3-modal-content">
+					<br>
+					<h3>AR Dating App Proposal</h3>
+					<br>
+					<img src="images/Game Design Document_slide1.jpg" alt="Game Design Document_slide1"/>
+					<p>"宝贝"/"HATCH"</p>
+					<img src="images/Game Design Document_slide2.jpg" alt="Game Design Document_slide2"/>
+					<p>We realized that the problem with the culture of online dating is that people are less likely to meet in person, which is an issue we hope to rectify through our app.</p>
+					<img src="images/Game Design Document_slide3.jpg" alt="Game Design Document_slide3"/>
+					<p>A combination of Neopets and Tinder, users will match with each other based on common interests in their profiles, thus enacting an event where they must find and foster a pet.</p>
+					<img src="images/Game Design Document_slide4.jpg" alt="Game Design Document_slide4"/>
+					<p>These rules are put in place to establish a serious minded relationship between two people. We want users to use our app as a means for physical interaction, not to prolong virtual discourse.</p>
+					<img src="images/Game Design Document_slide5.jpg" alt="Game Design Document_slide5"/>
+					<p>Users can obtain resources in different places within the academic building to raise their pet. In the cafeteria one can scan for food; in the cafe one can scan for treats; and at any water cooler one can scan for water. The bare necessities. Users are also urged to visit their pet together every now and then to give their pet a love boost.</p>
+					<img src="images/Game Design Document_slide6.jpg" alt="Game Design Document_slide6"/>
+					<img src="images/Game Design Document_slide7.jpg" alt="Game Design Document_slide7"/>
+				</div>
+			</div>
+			<img id = "image5" class="apps" src="images/Game Design Document_slide1.jpg" onclick="openModal(5);"/>
+			<div id="myModal6" class="w3-modal">
+				<button onclick="closeModal(6);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				<div class="w3-modal-content">
+					<br>
+					<h3>Photogrammetry</h3>
+					<br>
+					<img src="images/Screenshot (420).png" alt="Screenshot (420)"/>
+					<p>For our assignment on photogrammetry, I took several photos of the service elevator and imported them into Agiscan. I was confused as to why the three-sixty rendered image was blotchy, missing the important details of the environment such as the reflection of light on the metal elevator doors and the area outside the window. Also, when exported, for some reason the 3d model lacked the textures I saw when viewing them in the photogrammetry software.</p>
+					<img src="images/Screenshot (411).png" alt="Screenshot (411)"/>
+					<p>Nonetheless, I wanted to see if I could somehow use what I ultimately ended up with, in my roller ball game. I imagined the elevator as a prop in a dystopian city, a product of a nuclear meltdown that destroyed civilization as we knew it. And, you (the roller ball) as a mouse navigating the ruins of the city. The combination of organic grass and artificial technology of the elevator indicates a cycle of repossession by mother nature, reclaiming her territory and emphasizing her natural superiority to manmade mechanisms.</p>
+					<img src="images/Screenshot (410).png" alt="Screenshot (410)"/>
+				</div>
+			</div>
+			<img id = "image6" class="misc" src="images/Screenshot (420).png" onclick="openModal(6);"/>
+			<div id="myModal7" class="w3-modal">
+				<button onclick="closeModal(7);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				<div class="w3-modal-content">
+					<br>
+					<h3>Blippar AR</h3>
+					<br>
+					<p>For the purpose of experimenting with the Blippar app, I decided to animate Spongebob's face:</p>
+					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" alt="SPONGEBOB_blipp"/>
+					<p>By cropping three faces from this png:</p>
+					<img class="alignnone size-medium wp-image-77549" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22102224/8472-spongebob-square-pants-spongebobs-facial-expressions-300x225.jpg" alt="8472-spongebob-square-pants-spongebobs-facial-expressions"/>
+
+					<p>I animated a four-second gif to match the sound of Spongebob's laugh:</p>
+					<img src="images/Screenshot (357).png" alt="Screenshot (357)"/>
+					<p>I first tried to make the Blipp in the classic Blipbuilder, but the soundfile wasn't playing:</p>
+					<img src="images/Screenshot (358).png" alt="Screenshot (358)"/>
+					<p>So I made a new Blipp in the new Blipbuilder and while testing it, I discovered the sound still wasn't working.</p>
+					<img src="images/Screenshot (359).png" alt="Screenshot (359)"/>
+					<p>I think it has something to do with the fact that the soundfile I was using an .mp3. I reexported it as a .wav and am in the process of testing it again.</p>
+					<p>Blipp code is: 436891.</p>
+					<p>*Update: The Blipbuilder classic and the new Blipbuilder both produce different errors in my gif. Unfortunately I can not have a gif that plays with sound in either</p>
+				</div>
+			</div>
+			<img id = "image7" class="misc" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" onclick="openModal(7);"/>
 			<div id="myModal8" class="w3-modal">
-				<span onclick="closeModal(8);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content"> 
+				<button onclick="closeModal(8);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				<div class="w3-modal-content">
+					<br>
+					<h3>Piggy Party Co-op Game</h3>
+					<br> 
 					<h3>Phase 1: Design and Conquer</h3>
 					<p>Since I want my game to have a pixelated aesthetic, a lot of my textures were made in the style you will see below:<p>
 					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28163113/Screenshot-262-300x169.png" alt="screenshot-262"/> 
@@ -237,9 +274,9 @@
 					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/12/12141220/Screenshot-307-300x169.png" alt="screenshot-307"/>
 				</div>
 			</div>
-			<img id = "image8" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/12/12141123/Screenshot-304-300x130.png" onclick="openModal(8);"/>
+			<img id = "image8" class="games" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/12/12141123/Screenshot-304-300x130.png" onclick="openModal(8);"/>
 			
-			<script>
+			<script type="text/javascript">
 				function openModal(x) {
 				  var modal = document.getElementById('myModal'+x);
 				  modal.style.display = "block"; 
@@ -251,6 +288,7 @@
 					var modal = document.getElementById('myModal'+x);
 					modal.style.display = "none";
 				}
+				
 				/*
 				window.onclick = function(event) {
 					if (event.target == modal) {
@@ -263,13 +301,70 @@
 				  modal.removeChild(modal.lastChild);
 				  document.getElementById('myModal').style.display = "none";
 				}*/
-			</script>
+				
+				//var imageContainer = document.getElementById("thumbs");
+				//var images = imageContainer.getElementsByTagName("img");
+				
+				function showAll(){
+					var imageContainer = document.getElementById("thumbs");
+					var images = imageContainer.getElementsByTagName("img");
+					for(var i=0; i<images.length; i++){
+						images[i].setAttribute("style"," -webkit-filter: grayscale(0); filter: none; filter: grayscale(0);");
+						images[i].style.pointerEvents = 'auto';
+					}
+				}
+				
+				function showGames(){
+					var imageContainer = document.getElementById("thumbs");
+					var images = imageContainer.getElementsByTagName("img");
+					//var innerimages = imageContainer.getElementsByClassName("w3-modal-content");
+					for(var i=0; i<images.length; i++){
+						if(images[i].className == "apps" || images[i].className == "misc"){
+							images[i].setAttribute("style"," -webkit-filter: grayscale(1); filter: gray; filter: grayscale(1);");
+							//images[i].onclick = null;
+							images[i].style.pointerEvents = 'none';
+						} else {
+							images[i].setAttribute("style"," -webkit-filter: grayscale(0); filter: none; filter: grayscale(0);");
+							images[i].style.pointerEvents = 'auto';
+						}
+					}
+				}
+				
+				function showApps(){
+					var imageContainer = document.getElementById("thumbs");
+					var images = imageContainer.getElementsByTagName("img");
+					for(var i=0; i<images.length; i++){
+						if(images[i].className == "games" || images[i].className == "misc"){
+							images[i].setAttribute("style"," -webkit-filter: grayscale(1); filter: gray; filter: grayscale(1);");
+							images[i].style.pointerEvents = 'none';
+						} else {
+							images[i].setAttribute("style"," -webkit-filter: grayscale(0); filter: none; filter: grayscale(0);");
+							images[i].style.pointerEvents = 'auto';
+						}
+					}
+				}
+				
+				function showMisc(){
+					var imageContainer = document.getElementById("thumbs");
+					var images = imageContainer.getElementsByTagName("img");
+					for(var i=0; i<images.length; i++){
+						if(images[i].className == "games" || images[i].className == "apps"){
+							images[i].setAttribute("style"," -webkit-filter: grayscale(1); filter: gray; filter: grayscale(1);");
+							//images[i].onclick = null;
+							images[i].style.pointerEvents = 'none';
+						} else {
+							images[i].setAttribute("style"," -webkit-filter: grayscale(0); filter: none; filter: grayscale(0);");
+							images[i].style.pointerEvents = 'auto';
+						}
+					}
+				}
+		  </script>
 		</section>
 	  </article>
 	  <aside>
 		<h4>ABOUT ME</h4>
 		<br>
-		<p>Welcome to my site! I am an aspiring sound designer, audio engineer, music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<p>Welcome to my site! I am an aspiring music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
 		<p>saphya.monet@gmail.com</p>
 		<ul style = "list-style-type: none">
 		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
