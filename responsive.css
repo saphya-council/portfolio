@@ -3,6 +3,9 @@
   padding: 0;
   border: none;
 }
+header {
+	padding-top: 5em;
+}
 #main_content{
 	border: solid #A8676B;
 	height: 555px;
@@ -216,6 +219,8 @@ footer{
 	header{
 		padding-bottom: 10px;
 		text-align: center;
+		padding-top: 1em;
+
 	}
 
 	header h2{
