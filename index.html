@@ -18,7 +18,99 @@
 		width:100%;
 		z-index: 1;
 	}
+	.picture{
+		max-width: 400px;
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		float: right;
+		padding: 0;
+	}
+	.picture img{
+		height: 100%;
+		width: 90%;
+	}
+	
+	.description{
+		max-width: 500px;
+		/*width: 100%;*/
+		margin: 0;
+		float: left;
+		text-align: left
+	}
+	
+	.description p {
+		color:#A8676B;
+	}
+	#thumbnails {
+		/*border: 1px solid white;*/
+		text-align: justify;
+		margin-left: .5em;
+		margin-right:.5em;
+		position: static;
+	}
+	#thumbnails:after {
+		
+		content: '';
+		display: inline-block;
+	}
+	#thumbnails li{
+		display: inline-block;
+	}
+	#thumbnails img{
+		height: 125px !important;
+		width: 125px !important;
+	}
+	
+	@media all and (max-width: 640px) {
+		#myModal {
+		display: none;
+		height: 100%;
+		width:100%;
+		z-index: 1;
+	}
+	.picture{
+		max-width: 400px;
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.picture img{
+		height: 100%;
+		width: 100%;
+	}
+	
+	.description{
+		max-width: 500px;
+		/*width: 100%;*/
+		margin: 0;
+		text-align: left;
+	}
+	
+	.description p {
+		color:#A8676B;
+	}
+	#thumbnails {
+		/*border: 1px solid white;*/
+		text-align: center;
+		margin-left: .5em;
+		margin-right:.5em;
+		position: static;
+	}
+	#thumbnails img{
+		height: 125px !important;
+		width: 125px !important;
+	}
+	#thumbs{
+			height: 515px !important;
+		}
+	}
+
   </style>
+  	
+	<!-- Place this tag in your head or just before your close body tag. -->
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body>
   <header>
@@ -27,10 +119,11 @@
 	<button onclick="openMenu();" id="hamburger"><h4>menu</h4></button>
 	<button onclick="closeMenu();" id="cross">&#735;</button>
 	<div id="menu">
-		<p>Welcome to my site! I am an aspiring music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<p>Saphya is a lover of video games and music, new and old, but especially old. Her fascination with retro pop culture is immortalised in her interactive projects, paying homage to icons and trends of the 20th century, and through her radio show on video game music, <span style="font-style: italic">Press Start</span>.</p>
 		<ul style = "list-style-type: none">
-		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
-		  <li id ="pages"><a href="contact.html">Contact</a></li>
+			<li><a href="index.html">PROJECTS</a></li>
+			<li><a href="cv.html">CURRICULUM VITAE</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
 		</ul>
 	</div>
 	<script>
@@ -65,216 +158,163 @@
 	  <article>
 		<section>
 		  <ul id="nav">
-			<li><a href="javascript:showAll()">all</a></li>
+			<!--<li><a href="javascript:showAll()">all</a></li>
 			<li><a href="javascript:showGames()">games</a></li>
 			<li><a href="javascript:showApps()">apps</a></li>
-			<li><a href="javascript:showMisc()">misc</a></li>
+			<li><a href="javascript:showMisc()">misc</a></li>-->
+			<li><a href="index.html">INTERACTIVE PROJECTS</a></li>
+			<li><a href="cv.html">CURRICULUM VITAE</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
 		  </ul>
 		</section>
 		<section id="thumbs">
 			<div id="myModal9" class="w3-modal">
-				<button onclick="closeModal(9);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				
 				<div class="w3-modal-content">
 					<br>
-					<h3>Text Adventure Capstone</h3>
-					<br>
-					<p>For the purpose of experimenting with the Blippar app, I decided to animate Spongebob's face:</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" alt="SPONGEBOB_blipp"/>
-					<p>By cropping three faces from this png:</p>
-					<img class="alignnone size-medium wp-image-77549" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22102224/8472-spongebob-square-pants-spongebobs-facial-expressions-300x225.jpg" alt="8472-spongebob-square-pants-spongebobs-facial-expressions"/>
-
-					<p>I animated a four-second gif to match the sound of Spongebob's laugh:</p>
-					<img src="images/Screenshot (357).png" alt="Screenshot (357)"/>
-					<p>I first tried to make the Blipp in the classic Blipbuilder, but the soundfile wasn't playing:</p>
-					<img src="images/Screenshot (358).png" alt="Screenshot (358)"/>
-					<p>So I made a new Blipp in the new Blipbuilder and while testing it, I discovered the sound still wasn't working.</p>
-					<img src="images/Screenshot (359).png" alt="Screenshot (359)"/>
-					<p>I think it has something to do with the fact that the soundfile I was using an .mp3. I reexported it as a .wav and am in the process of testing it again.</p>
-					<p>Blipp code is: 436891.</p>
-					<p>*Update: The Blipbuilder classic and the new Blipbuilder both produce different errors in my gif. Unfortunately I can not have a gif that plays with sound in either</p>
+					<div class="picture">
+						<img id="tobechanged1" src="images/Screenshot (375).png"/>
+						<button onclick="closeModal(9);" style="position:absolute; top:0;cursor:pointer; color: white; background-color: black; font-size: 30px;">&#735;</button>
+					</div>
+					
+					<div class="description">
+						<h3>The Legend of Link (LoL)</h3>
+						<h4>Capstone, Spring 2017</h4>
+						<br>
+						<p><span style="color:white">LoL</span> aka <span style="color:white">Legend of Link</span> is an interactive text adventure designed in Python script and executed in the terminal. The idea was very much inspired by text adventures of the 80s and 90s and my own love of choose-your-own-adventure stories. The narrative is a spinoff of Nintendo's popular Legend of Zelda. Players can play any way they want, however there is only one set path to success. After a completed playthrough, the program will have generated a musical score which acts as a record of the player's choices throughout playing the game.</p>
+						<p>Music was processed by taking musical notes from the midi-read Legend of Zelda Side A theme in MuseScore, and placed in a Python dictionary. Using Music21, I wrote a script to stitch the notes together into a playable stream which is activated upon quitting or reaching the end of the game.</p>
+						<p>Credit to Music21 library from MIT and Nintendo for the use of their characters and music. The base python scripts can be found <a href="https://github.com/saphya-council/theLegendofLink/tree/master/src">here</a>. Music21 library is required to run.</p>
+						<ul id="thumbnails">
+							<li><a onclick='pictureChanger("images/Screenshot (375).png","tobechanged1");'><img src="images/Lol_smol.png"/></a></li>
+							<li><a onclick='pictureChanger("images/capstone_paperprototype.jpg","tobechanged1");'><img src="images/capstone_paperprototype_smol.jpg"/></a></li>
+							<!--<li><a onclick='pictureChanger("images/Screenshot (437).png","tobechanged1");'><img src="images/Screenshot (437)_smol.png"/></a></li>-->
+						 </ul>
+					</div>
+					
 				</div>
 			</div>
-			<img id = "image9" class="games" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" onclick="openModal(9);"/>
-			<div id="myModal1" class="w3-modal">
-				<button onclick="closeModal(1);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
-				<div class="w3-modal-content">
-					<br>
-					<h3>Zombie Sfx Makeup</h3>
-					<h4>Introduction to Special Effects Makeup Fall 2015</h4>
-					<p>NYU Tisch</p>
-					<br>
-					<img src="images/sfx_head.jpg" style="width:75%;height:75%;" alt="zombie head makeup"/>
-					<p>A headshot of a zombie makeup I did on a classmate.</p>
-					<br>
-					<img style="width:100%;height:100%;" src="images/sfx_hand.jpg" alt="zombie hand makeup"/>
-					<p>A burn wound done with silicone, alcohol paint, and gelatin.</p>
-				</div>
-			</div>
-			<img id = "image1" class="misc" src="images/sfx_head.jpg" alt="zombie head makeup" onclick="openModal(1);"/>
-			<!--
-			<div id="myModal2" class="w3-modal">
-				<span onclick="closeModal(2);" style="cursor:pointer">×</span>
-				<div class="w3-modal-content">
-					<img src="images/20161122_114645.jpg" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);" alt="animatronic; width:100%;height:100%;"/>
-					<p>I'm a robot!</p>
-				</div>
-			</div>
-			<img id = "image2" src="images/20161122_114645.jpg" style="-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);" alt="animatronic" onclick="openModal(2);"/>-->
-			<div id="myModal3" class="w3-modal">
-				<button onclick="closeModal(3);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
-				<div class="w3-modal-content">
-					<br>
-					<h3>Wireframe</h3>
-					<h4>Introduction to Web Design and Computer Principles Spring 2016</h4>
-					<p>NYU Gallatin</p>
-					<br>
-					<img style="width:100%;height:100%;" src="images/Screenshot (232).png" alt="wireframe"/>
-					<p>A prototype website designed in Adobe Indesign.</p>
-				</div>
-			</div>
-			<img id = "image3" class="misc" src="images/Screenshot (232).png" onclick="openModal(3);"/>
-			<div id="myModal4" class="w3-modal">
-				<button onclick="closeModal(4);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
-				<div class="w3-modal-content">
-					<br>
-					<h3>Sound Design for Short Film</h3>
-					<br>
-					<img style="width:100%;height:100%;" src="https://i.ytimg.com/vi/AYfhK-2dCYY/hqdefault.jpg" alt="selfassembly"/>
-					<a href="https://youtu.be/AYfhK-2dCYY"><h4>Self Assembly</h4></a>
-					<p>A project done for the Sound Design for Media course at NYU Tandon. Three students and myself collaborated on this project, taking an existing piece of work and rehashing it with new sound to elicit a more unsettling and terrifying feeling.</p>
-				</div>
-			</div>
-			<img id = "image4" class="misc" src="https://i.ytimg.com/vi/AYfhK-2dCYY/hqdefault.jpg" onclick="openModal(4);"/>
-			<div id="myModal5" class="w3-modal">
-				<button onclick="closeModal(5);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
-				<div class="w3-modal-content">
-					<br>
-					<h3>AR Dating App Proposal</h3>
-					<br>
-					<img src="images/Game Design Document_slide1.jpg" alt="Game Design Document_slide1"/>
-					<p>"宝贝"/"HATCH"</p>
-					<img src="images/Game Design Document_slide2.jpg" alt="Game Design Document_slide2"/>
-					<p>We realized that the problem with the culture of online dating is that people are less likely to meet in person, which is an issue we hope to rectify through our app.</p>
-					<img src="images/Game Design Document_slide3.jpg" alt="Game Design Document_slide3"/>
-					<p>A combination of Neopets and Tinder, users will match with each other based on common interests in their profiles, thus enacting an event where they must find and foster a pet.</p>
-					<img src="images/Game Design Document_slide4.jpg" alt="Game Design Document_slide4"/>
-					<p>These rules are put in place to establish a serious minded relationship between two people. We want users to use our app as a means for physical interaction, not to prolong virtual discourse.</p>
-					<img src="images/Game Design Document_slide5.jpg" alt="Game Design Document_slide5"/>
-					<p>Users can obtain resources in different places within the academic building to raise their pet. In the cafeteria one can scan for food; in the cafe one can scan for treats; and at any water cooler one can scan for water. The bare necessities. Users are also urged to visit their pet together every now and then to give their pet a love boost.</p>
-					<img src="images/Game Design Document_slide6.jpg" alt="Game Design Document_slide6"/>
-					<img src="images/Game Design Document_slide7.jpg" alt="Game Design Document_slide7"/>
-				</div>
-			</div>
-			<img id = "image5" class="apps" src="images/Game Design Document_slide1.jpg" onclick="openModal(5);"/>
+			<img id = "image9" class="picha" src="images/Lol_smol.png" onclick="openModal(9);"/>
 			<div id="myModal6" class="w3-modal">
-				<button onclick="closeModal(6);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				
 				<div class="w3-modal-content">
 					<br>
-					<h3>Photogrammetry</h3>
-					<br>
-					<img src="images/Screenshot (420).png" alt="Screenshot (420)"/>
-					<p>For our assignment on photogrammetry, I took several photos of the service elevator and imported them into Agiscan. I was confused as to why the three-sixty rendered image was blotchy, missing the important details of the environment such as the reflection of light on the metal elevator doors and the area outside the window. Also, when exported, for some reason the 3d model lacked the textures I saw when viewing them in the photogrammetry software.</p>
-					<img src="images/Screenshot (411).png" alt="Screenshot (411)"/>
-					<p>Nonetheless, I wanted to see if I could somehow use what I ultimately ended up with, in my roller ball game. I imagined the elevator as a prop in a dystopian city, a product of a nuclear meltdown that destroyed civilization as we knew it. And, you (the roller ball) as a mouse navigating the ruins of the city. The combination of organic grass and artificial technology of the elevator indicates a cycle of repossession by mother nature, reclaiming her territory and emphasizing her natural superiority to manmade mechanisms.</p>
-					<img src="images/Screenshot (410).png" alt="Screenshot (410)"/>
+					<div class="picture">
+						<img id="tobechanged2" src="images/hatchontable.jpg"/>
+						<button onclick="closeModal(6);" style="position:absolute; top:0;cursor:pointer; color: white; background-color: black; font-size: 30px;">&#735;</button>
+					</div>
+					
+					<div class="description">
+						<h3>HATCH</h3>
+						<h4>Mixed Reality Storytelling, Spring 2017</h4>
+						<br>
+						<p>Inspired by Tinder and Tamagotchi, <span style="color:white">HATCH</span> is a simulation game in which a couple cares for a dragon that has been customized from the couple's common interests. </p> 
+						<p>The premise of this app was to create an augmented reality experience to simulate our experiences in NYU Shanghai. Dating culture is very popular amongst students, but the problem my partner and I saw was that people rarely physically met up, or engaged in romantic behavior beyond hooking up. <span style="color:white">HATCH</span> was made to combat that and to promote serious romantic attitudes in a form familiar to the virtual dating population. As a sign of wanting to preserve and develop the relationship, matched couples are urged to watch over the dragon and give it food, drink, and entertainment. These resources can be acquired by scanning image targets made in Vuforia.</p>
+						<p><span style="color:white">HATCH</span> is a dating app designed in Unity3d and programmed in c-sharp. 3D models were made in MagicaVoxel and animated in Unity3d.</p>
+						<ul id="thumbnails">
+							<li><a onclick='pictureChanger("images/hatchontable.jpg","tobechanged2");'><img src="images/hatchontable_smol.jpg"/></a></li>
+							<!--<li><a onclick='pictureChanger("images/Game Design Document_slide5.jpg","tobechanged2");'><img src="images/Game Design Document_slide5_smol.jpg"/></a></li>-->
+							<li><a onclick='pictureChanger("images/milk_target.jpg","tobechanged2");'><img src="images/milk_target_smol.jpg"/></a></li>
+						 </ul>
+					</div>
+					
 				</div>
 			</div>
-			<img id = "image6" class="misc" src="images/Screenshot (420).png" onclick="openModal(6);"/>
+			<img id = "image6" class="picha" src="images/hatchontable_smol.jpg" onclick="openModal(6);"/>
 			<div id="myModal7" class="w3-modal">
-				<button onclick="closeModal(7);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				
 				<div class="w3-modal-content">
 					<br>
-					<h3>Blippar AR</h3>
-					<br>
-					<p>For the purpose of experimenting with the Blippar app, I decided to animate Spongebob's face:</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" alt="SPONGEBOB_blipp"/>
-					<p>By cropping three faces from this png:</p>
-					<img class="alignnone size-medium wp-image-77549" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22102224/8472-spongebob-square-pants-spongebobs-facial-expressions-300x225.jpg" alt="8472-spongebob-square-pants-spongebobs-facial-expressions"/>
-
-					<p>I animated a four-second gif to match the sound of Spongebob's laugh:</p>
-					<img src="images/Screenshot (357).png" alt="Screenshot (357)"/>
-					<p>I first tried to make the Blipp in the classic Blipbuilder, but the soundfile wasn't playing:</p>
-					<img src="images/Screenshot (358).png" alt="Screenshot (358)"/>
-					<p>So I made a new Blipp in the new Blipbuilder and while testing it, I discovered the sound still wasn't working.</p>
-					<img src="images/Screenshot (359).png" alt="Screenshot (359)"/>
-					<p>I think it has something to do with the fact that the soundfile I was using an .mp3. I reexported it as a .wav and am in the process of testing it again.</p>
-					<p>Blipp code is: 436891.</p>
-					<p>*Update: The Blipbuilder classic and the new Blipbuilder both produce different errors in my gif. Unfortunately I can not have a gif that plays with sound in either</p>
+					<div class="picture">
+						<img id="tobechanged5" src="images/spongebob-gif.gif"/>
+						<button onclick="closeModal(7);" style="position:absolute; top:0;cursor:pointer; color: white; background-color: black; font-size: 30px;">&#735;</button>
+					</div>
+					
+					<div class="description">
+						<h3>Spongebob Laugh Blipp</h3>
+						<h4>Mixed Reality Storytelling, Spring 2017</h4>
+						<br>
+						<p>The <span style="color:white">Spongebob Laugh Blipp</span> was a short project to test out the power of the AR app, Blippar. Blippar is a visual discovery app which utilizes the smartphone camera to bring augmented reality experiences straight to the hands of its users.</p>
+						<p>When scanning <a href="images/SPONGEBOB_blipp.jpg" target="_blank">this image</a>  in the Blippar app and using the code 436891, users will see a gif with audio of the character laughing. The animation was created in Photoshop and audio was synthesized in Reaper.</p>
+						<p>Credit to Nickelodeon for the use of their character, Spongebob Squarepants.</p>
+						<ul id="thumbnails">
+							<li><a onclick='pictureChanger("images/Screenshot (359).png","tobechanged5");'><img src="images/Screenshot (359)_smol.png"/></a></li>
+							<li><a onclick='pictureChanger("images/Screenshot (357).png","tobechanged5");'><img src="images/Screenshot (357)_smol.png"/></a></li>
+							<li><a onclick='pictureChanger("images/spongebob-gif.gif","tobechanged5");'><img src="images/spongebob-gif_smol.gif"/></a></li>
+						 </ul>
+					</div>
+					
 				</div>
 			</div>
-			<img id = "image7" class="misc" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2017/02/22101451/SPONGEBOB_blipp-300x237.jpg" onclick="openModal(7);"/>
+			<img id = "image7" class="picha" src="images/spongebob-gif_smol.gif" onclick="openModal(7);"/>
 			<div id="myModal8" class="w3-modal">
-				<button onclick="closeModal(8);" style="cursor:pointer; color: white; background-color: black">&#735;</button>
+				
 				<div class="w3-modal-content">
 					<br>
-					<h3>Piggy Party Co-op Game</h3>
-					<br> 
-					<h3>Phase 1: Design and Conquer</h3>
-					<p>Since I want my game to have a pixelated aesthetic, a lot of my textures were made in the style you will see below:<p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28163113/Screenshot-262-300x169.png" alt="screenshot-262"/> 
-					<p>First, it started with a flower.</p>
-					<p>The game is supposed to take place in Japan. I appropriated many Japanese motifs such as the cherry blossom in the main map and sumo wrestling mat in minigame one.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28163101/Screenshot-261-300x169.png" alt="screenshot-261" /> 
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162708/Screenshot-287-286x300.png" alt="screenshot-287"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28163048/Screenshot-260-300x169.png" alt="screenshot-260"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162718/Screenshot-288-285x300.png" alt="screenshot-288"/>
-					<p>Some models aren't completely original. This coin for example, I made in Blender but the texture is from a .png I found on the interweb.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28163006/Screenshot-257-300x169.png" alt="screenshot-257"/>
-					<p>The picture above is the first version of my pig. I had a lot of trouble linking limbs to the pigs body through the boolean modifier so I scrapped this pig and made the one below.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162657/Screenshot-286-273x300.png" alt="screenshot-286" />
-					<p>The second version of the pig also had trouble coming together, but by this point I had all the animations done and textures applied so I didn't want to make a whole other model.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162435/Screenshot-276-300x169.png" alt="screenshot-276"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162310/Screenshot-270-300x169.png" alt="screenshot-270"/> 
-					<br>
-					<h3>Phase 2: Unified in Unity</h3>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162152/Screenshot-264-300x169.png" alt="screenshot-264"/> 
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162205/Screenshot-265-300x169.png" alt="screenshot-265" />    
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162405/Screenshot-274-300x169.png" alt="screenshot-274"/></a>
-					<p>My game will use spherical gravity as opposed to the regular gravity used for Unity objects. The pig needs to constantly be pulled towards the center as it moves around the spherical surface. I used the following to achieve this action:</p>
-					<a href="https://github.com/SebLague/Spherical-Gravity"><p>https://github.com/SebLague/Spherical-Gravity</p></a>
-					<h3>Minigame 1:</h3>
-					<p>A simple coin collecting game. Players are in a race against time in the dark as they collect coins to get the highest score in this minigame. This was by far the easiest part of the entire game, since it didn't involve scripting physics to work.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162449/Screenshot-277-300x169.png" alt="screenshot-277"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162549/Screenshot-281-300x169.png" alt="screenshot-281"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162603/Screenshot-282-300x169.png" alt="screenshot-282"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162617/Screenshot-283-300x169.png" alt="screenshot-283"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162645/Screenshot-285-300x169.png" alt="screenshot-285" />
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162631/Screenshot-284-300x169.png" alt="screenshot-284"/>
-					<h3>Minigame 2:</h3>
-					<p>Players try to stay grounded on a ever-tilting disk rotating on a pivot. One player can throw their opponents off balance by clicking on the screen, which instantiates random objects (coins or teacups) to throw the player off balance.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162728/Screenshot-289-300x169.png" alt="screenshot-289"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162905/Screenshot-296-300x169.png" alt="screenshot-296"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162822/Screenshot-293-300x169.png" alt="screenshot-293"/>
-					<h3>Minigame 3:</h3>
-					<p>Players try to remain on the spinning bottle (controlled by another player), running in the opposite direction the bottle is spinning in to avoid falling off.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162837/Screenshot-294-300x169.png" alt="screenshot-294"/>
-					<br>
-					<h3>Phase 3: Embellishing</h3>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162925/Screenshot-297-300x169.png" alt="screenshot-297" /> 
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162953/Screenshot-299-300x169.png" alt="screenshot-299"/>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28162939/Screenshot-298-300x169.png" alt="screenshot-298" />
-					<p>I only used royalty-free sound for my game. I used sources such as freesound.org and Kevin Macleod's <a href="http://freemusicarchive.org/music/Kevin_MacLeod/">personal site</a> to find materials.</p>
-					<img class="wp-image-66009 size-medium" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/11/28212905/Screenshot-300-300x169.png" alt="screenshot-300"/> 
-					<br>
-					<h3>Phase 4: The Future</h3>
-					<p>Besides the obvious glitches, my biggest goal for this game is to add online multiplayer support. This game is ideally for Android and iOS devices so I expect to have builds for those operating systems in the future.</p>
-					<br>
-					<h3>Updates:</h3>
-					<h3>New Minigame 4 (Hot Pigtato)!</h3>
-					<p>After struggling with the physics in Minigame 2 and 3,  I've decided to create another minigame with easier mechanics as I work on troubleshooting the others. I took the disk from Minigame 2 and separated it into four objects in Blender before exporting the .fbx in Unity and making animations there. I was having too much trouble with exporting the Blender animations so I decided to forego that and try out Unity animations. I thought that animating objects in Unity was much easier than in Blender. With all the animations now done, I made an array with every piece of the disk inside, so that every five seconds, up to three pieces are randomly triggered. The objective of this minigame is to outlast the timer, and avoid the other player so you don't get pushed off the platform.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/12/12141123/Screenshot-304-300x130.png" alt="screenshot-304"/></a>
-					<h3>Minigame 1 - Pig Grows Larger!</h3>
-					<p>With every coin, the pig is scaled up by (0.025f, 0.025f, 0.025f). Whichever pig reaches (0.7,0.7,0.7) first, wins the round.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/12/12142546/Screenshot-309-300x169.png" alt="screenshot-309"/>
-					<h3>Main Menu and Modes!</h3>
-					<p>Instead of jumping right into the main map, players now have the option of playing story mode (main map and randomized mini games) or minigame mode where players can select whichever minigame they like best.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/12/12141206/Screenshot-303-300x169.png" alt="screenshot-303"/></a>
-					<h3>Instructions!</h3>
-					<p>To help players know which pig they are playing as, and the controls for the game.</p>
-					<img src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/12/12141220/Screenshot-307-300x169.png" alt="screenshot-307"/>
+					<div class="picture">
+						<!--<img id="tobechanged4" src="images/Screenshot (375).png" data-video="https://www.youtube.com/embed/Ht6IBKUHbZw"/>-->
+						<iframe width="390" height="219" src="https://www.youtube.com/embed/Ht6IBKUHbZw?rel=0" frameborder="0" allowfullscreen></iframe>
+						<button onclick="closeModal(8);" style="position:absolute; top:0;cursor:pointer; color: white; background-color: black; font-size: 30px;">&#735;</button>
+					</div>
+					
+					<div class="description">
+						<h3>Piggy Party</h3>
+						<h4>Video Games, Fall 2016</h4>
+						<br>
+						<p><span style="color:white">Piggy Party</span> is a co-op game developed for PC and Mac and designed and programmed in Unity3d. Story and gameplay is inspired by Nintendo's Mario Party series.</p>
+						<p><span style="color:white">Piggy Party</span> has two game modes: story mode and minigame mode. The story mode, like in Mario Party, requires users to roll a die to progress through the map. Once all users have rolled, players are initiated into a minigame chosen at random, and battle to win and earn the most coins. In the case of <span style="color:white">Piggy Party</span>, the map screen uses a spherical gravity design to simulate infinite gameplay. This game so far has support for up to two players with plans for multiplayer online support in the future. In minigame mode, players can play their favorite minigames anytime they want. There are five minigames in the making, two of which are playable in the current build.</p>
+						<p>3d models were designed and rigged in Blender, whereas 2d textures and icons were made custom in Photoshop.</p>
+						<p>Credit to Kevin MacLeod for the use of his music.</p>
+						<!--<ul id="thumbnails">
+							<li><a onclick='pictureChanger("images/hatchontable.jpg","tobechanged2");'><img src="images/hatchontable_smol.jpg"/></a></li>
+							<li><a onclick='pictureChanger("images/Game Design Document_slide5.jpg","tobechanged2");'><img src="images/Game Design Document_slide5_smol.jpg"/></a></li>
+							<li><a onclick='pictureChanger("images/Screenshot (447).png","tobechanged2");'><img src="images/Screenshot (447)_smol.jpg"/></a></li>
+						 </ul>-->
+					</div>
+					
 				</div>
 			</div>
-			<img id = "image8" class="games" src="http://s3-ap-southeast-1.amazonaws.com/ima-wp/wp-content/uploads/sites/5/2016/12/12141123/Screenshot-304-300x130.png" onclick="openModal(8);"/>
+			<img id = "image8" class="picha" src="images/piggy_party_smol.png" onclick="openModal(8);"/>
+			<div id="myModal4" class="w3-modal">
+				<div class="w3-modal-content">
+					<br>
+					<div class="picture">
+						<iframe width="390" height="219" src="https://www.youtube.com/embed/AYfhK-2dCYY?rel=0" frameborder="0" allowfullscreen></iframe>
+						<button onclick="closeModal(4);" style="position:absolute; top:0;cursor:pointer; color: white; background-color: black; font-size: 30px;">&#735;</button>
+					</div>
+					
+					<div class="description">
+						<h3>'Self Assembly' Sound Design</h3>
+						<h4>Sound Design for Media, Spring 2016</h4>
+						<br>
+						<p><span style="color: white">Self Assembly</span> is an independent psychological thriller short film by Ray Sullivan. In a collaborative effort, myself with a team of three other students rehashed the entire score for the film in an effort to create a more terrifying viewing experience.</p>
+						<p>We divvied up the film into four sections, for each of which a member of the team was responsible for designing sound. Audio sources were taken from freesound.org as well as the Youtube Creative Commons, then added and edited via Reaper.</p>
+					</div>	
+				</div>
+			</div>
+			<img id = "image4" class="picha" src="images/reaper_sd_smol.png" onclick="openModal(4);"/>
+			<div id="myModal1" class="w3-modal">
+				<div class="w3-modal-content">	
+					<br>
+					<div class="picture">
+						<img id="tobechanged3" src="images/sfx_head.jpg"/>
+						<button onclick="closeModal(1);" style="position:absolute; top:0;cursor:pointer; color: white; background-color: black; font-size: 30px;">&#735;</button>
+					</div>
+					
+					<div class="description">
+						<h3>Zombie Sfx Makeup</h3>
+						<h4>Introduction to Special Effects Makeup, Fall 2015</h4>
+						<br>
+						<p>During study abroad in New York, I took a course on special effects makeup. Over the course I learned how to create believable zombie arm makeup, zombie hand makeup, and a anatomically correct bust of a character from my imagination. Some of the tools we used were silicone, gelatin, alcohol paint, and clay.</p>
+						<ul id="thumbnails">
+							<li><a onclick='pictureChanger("images/sfx_head.jpg","tobechanged3");'><img src="images/sfx_head_smol.jpg"/></a></li>
+							<li><a onclick='pictureChanger("images/sfx_bust.jpg","tobechanged3");'><img src="images/sfx_bust_smol.jpg"/></a></li>
+							<li><a onclick='pictureChanger("images/sfx_hand.jpg","tobechanged3");'><img src="images/sfx_hand_smol.jpg"/></a></li>
+						 </ul>
+					</div>
+				</div>
+			</div>
+			<img id = "image1" class="picha" src="images/sfx_head_smol.jpg" alt="zombie head makeup" onclick="openModal(1);"/>
+			
 			
 			<script type="text/javascript">
 				function openModal(x) {
@@ -289,74 +329,9 @@
 					modal.style.display = "none";
 				}
 				
-				/*
-				window.onclick = function(event) {
-					if (event.target == modal) {
-						modal.style.display = "none";
-					}
-				}*/
-				/*
-				function closeModal() {
-				  var modal = document.getElementById('myModal');
-				  modal.removeChild(modal.lastChild);
-				  document.getElementById('myModal').style.display = "none";
-				}*/
-				
-				//var imageContainer = document.getElementById("thumbs");
-				//var images = imageContainer.getElementsByTagName("img");
-				
-				function showAll(){
-					var imageContainer = document.getElementById("thumbs");
-					var images = imageContainer.getElementsByTagName("img");
-					for(var i=0; i<images.length; i++){
-						images[i].setAttribute("style"," -webkit-filter: grayscale(0); filter: none; filter: grayscale(0);");
-						images[i].style.pointerEvents = 'auto';
-					}
-				}
-				
-				function showGames(){
-					var imageContainer = document.getElementById("thumbs");
-					var images = imageContainer.getElementsByTagName("img");
-					//var innerimages = imageContainer.getElementsByClassName("w3-modal-content");
-					for(var i=0; i<images.length; i++){
-						if(images[i].className == "apps" || images[i].className == "misc"){
-							images[i].setAttribute("style"," -webkit-filter: grayscale(1); filter: gray; filter: grayscale(1);");
-							//images[i].onclick = null;
-							images[i].style.pointerEvents = 'none';
-						} else {
-							images[i].setAttribute("style"," -webkit-filter: grayscale(0); filter: none; filter: grayscale(0);");
-							images[i].style.pointerEvents = 'auto';
-						}
-					}
-				}
-				
-				function showApps(){
-					var imageContainer = document.getElementById("thumbs");
-					var images = imageContainer.getElementsByTagName("img");
-					for(var i=0; i<images.length; i++){
-						if(images[i].className == "games" || images[i].className == "misc"){
-							images[i].setAttribute("style"," -webkit-filter: grayscale(1); filter: gray; filter: grayscale(1);");
-							images[i].style.pointerEvents = 'none';
-						} else {
-							images[i].setAttribute("style"," -webkit-filter: grayscale(0); filter: none; filter: grayscale(0);");
-							images[i].style.pointerEvents = 'auto';
-						}
-					}
-				}
-				
-				function showMisc(){
-					var imageContainer = document.getElementById("thumbs");
-					var images = imageContainer.getElementsByTagName("img");
-					for(var i=0; i<images.length; i++){
-						if(images[i].className == "games" || images[i].className == "apps"){
-							images[i].setAttribute("style"," -webkit-filter: grayscale(1); filter: gray; filter: grayscale(1);");
-							//images[i].onclick = null;
-							images[i].style.pointerEvents = 'none';
-						} else {
-							images[i].setAttribute("style"," -webkit-filter: grayscale(0); filter: none; filter: grayscale(0);");
-							images[i].style.pointerEvents = 'auto';
-						}
-					}
+				function pictureChanger(x,y){
+					//var imagesrc = '"'+y+'"';
+					document.getElementById(y).src = x;		
 				}
 		  </script>
 		</section>
@@ -364,36 +339,16 @@
 	  <aside>
 		<h4>ABOUT ME</h4>
 		<br>
-		<p>Welcome to my site! I am an aspiring music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<p>Saphya is a lover of video games and music, new and old, but especially old. Her fascination with retro pop culture is immortalised in her interactive projects, paying homage to icons and trends of the 20th century, and through her radio show on video game music, <span style="font-style: italic">Press Start</span>.</p>
 		<p>saphya.monet@gmail.com</p>
-		<ul style = "list-style-type: none">
-		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
-		  <br>
-		  <li id ="pages"><a href="contact.html">Contact</a></li>
-		</ul>
-		<br>
-		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
-      
-          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
-        
-		</a></p>
-		<div style="text-align: center">
-		<p >Download Links:</p>
-		<ul style = "list-style-type: none">
-			<li>CV</li>
-			<li><a href="pdf_files/saphyacv.pdf" target="_blank"><img src="pdflogo.png"></a></li>
-			<li>Resume</li>
-			<li><a href="pdf_files/saphyaresume.pdf" target="_blank"><img src="pdflogo.png"></a></li>
-		</ul>
-		</div>
+		<p><a href="https://github.com/saphya-council">github</a>|<a href="https://www.linkedin.com/in/saphya-council-36a31077/">linkedin</a>|<a href="http://wnyu.org/archives?c=press-start">radio</a></p>
+		
+
 	  </aside>
 	</div>
 	<footer>
-		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
-      
-          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
-        
-		</a></p>
+		<p><a href="https://github.com/saphya-council">github</a>|<a href="https://www.linkedin.com/in/saphya-council-36a31077/">linkedin</a>|<a href="http://wnyu.org/archives?c=press-start">radio</a></p>
 	</footer>
+
 </body>
 </html>

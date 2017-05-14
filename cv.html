@@ -15,7 +15,21 @@
 	article p{
 		color:#A8676B;
 	}
+	#background{
+		text-align: left; 
+		overflow-y: scroll; 
+		max-height: 475px;
+	}
+	@media all and (max-width: 640px) {
+			
+		#background{
+			max-height: 515px !important;
+		}
+	}
   </style>
+  	
+	<!-- Place this tag in your head or just before your close body tag. -->
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body>
   <header>
@@ -24,10 +38,11 @@
 	<button onclick="openMenu();" id="hamburger"><h4>menu</h4></button>
 	<button onclick="closeMenu();" id="cross">&#735;</button>
 	<div id="menu">
-		<p>Welcome to my site! I am an aspiring music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<p>Saphya is a lover of video games and music, new and old, but especially old. Her fascination with retro pop culture is immortalised in her interactive projects, paying homage to icons and trends of the 20th century, and through her radio show on video game music, <span style="font-style: italic">Press Start</span>.</p>
 		<ul style = "list-style-type: none">
-		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
-		  <li id ="pages"><a href="contact.html">Contact</a></li>
+			<li><a href="index.html">PROJECTS</a></li>
+			<li><a href="cv.html">CURRICULUM VITAE</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
 		</ul>
 	</div>
 	<script>
@@ -70,35 +85,42 @@
 			</div>
 		</div>
 	  <article>
-		<section id = "background" style = "text-align: left; overflow-y: scroll; max-height: 475px;">
+		<section>
+		  <ul id="nav">
+			<li><a href="index.html">INTERACTIVE PROJECTS</a></li>
+			<li><a href="cv.html">CURRICULUM VITAE</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		  </ul>
+		</section>
+		<section id = "background">
 		  <h3>PROFILE:</h3>
-<p>	Motivated, self-driven B.S. candidate with demonstrated creative and technical achievements in sound and game design (including 3d modeling, materials drawing, and component scripting)</p>
-<p>	Advanced knowledge of database technology and asset management</p>
-<p>	Programming in Javascript, C/C++, C#, Java, Python, Max/MSP, HTML/CSS</p>
+<p>-	Motivated, self-driven B.S. candidate with demonstrated creative and technical achievements in sound and game design (including 3d modeling, materials drawing, and component scripting)</p>
+<p>-	Advanced knowledge of database technology and asset management</p>
+<p>-	Programming in Javascript, C/C++, C#, Java, Python, Max/MSP, HTML/CSS</p>
 <br>
 <h3>EDUCATION:</h3>   
-	<p>New York University Shanghai, Shanghai, P.R. China (GPA: 3.53/4.0)</p>
-	<p>B.S. Interactive Media Arts, May 2017 (expected), GPA: 3.8/4.0</p>
+	<p>New York University Shanghai, Shanghai, P.R. China</p>
+	<p>B.S. Interactive Media Arts, May 2017</p>
 	<p>Relevant Coursework: Interaction Lab, Sound & Vision, Sound Design for Media, Recording Technology</p>
-	<p>Awards: Autodesk Smart Home Design Challenge ’15 Honorable Mention, Dean’s Service Scholar ‘15, NYUSH	Hackathon ‘14 Honorable Mention</p>
+	<p>Awards: Autodesk Smart Home Design Challenge '15 Honorable Mention, Dean's Service Scholar '15, NYUSH	Hackathon '14 Honorable Mention</p>
 <br>
 <h3>RESEARCH INTERESTS:</h3>					
-<p>	Professional audio tool development</p>
-<p>	Audio signal processing theory and application</p>
-<p>	Natural language processing</p>
+<p>-	Professional audio tool development</p>
+<p>-	Audio signal processing theory and application</p>
+<p>-	Natural language processing</p>
 <br>
 
 <h3>WORK EXPERIENCE:</h3>
 <br><h4>New York University Shanghai, Shanghai, P.R. China</h4>
-<h4>ICP Learning Assistant, Feb – May 2017</h4>
+<h4>ICP Learning Assistant, Feb - May 2017</h4>
 <p>Attend lecture and recitation and work closely with faculty and Global Academic Fellows to support students as they work on class assignments. Host individual and small group tutoring in the Academic Resource Center. Maintain regular communication regarding student progress with advisor and supervisor.</p>
 <br>
 <h4>MK Studios, Shanghai, P.R. China</h4>
-<h4>Studio Technician/Assistant, Oct – present</h4> 
+<h4>Studio Technician/Assistant, Oct - present</h4> 
 <p>Engineered working prototypes of two assigned art installations using commissioned parts. Designed professional schematics of unique parts for projects. Found new solutions to making the projects function by introducing alternative mechanisms. Assisted artist in the procurement of resources and the production of stable mock-ups.<p>
 <br>
 <h4>New York University Shanghai, Shanghai, P.R. China</h4>
-<h4>IMA Lab Student Worker, Feb – May 2015, Sep – Dec 2016</h4>
+<h4>IMA Lab Student Worker, Feb - May 2015, Sep - Dec 2016</h4>
 <p>Provided support to IMA professors by loaning out equipment to students and overseeing recitations. Edited and narrated tutorial videos for IMA equipment to then post on the class site. Took inventory and updated the IMA equipment online database. Monitored the lab and organized the room in time for lab closing. Served as a moderator for special events hosted by IMA, e.g. Barcamp ’15 –a fun, user-generated tech conference.</p>
 <br>
 <h4>Urban Legends Project, Manhattan, NY, USA</h4> 
@@ -110,7 +132,7 @@
 <p>Audited company site to ensure easy, hassle-free browsing. Various administrative duties like data entry and packaging mail. Burned CDs and updated music database.</p>
 <br>
 <h4>WNYU, Manhattan, NY, USA</h4>
-<h4>Radio Show Host/Disc Jockey October 2015 – April 2016</h4>
+<h4>Radio Show Host/Disc Jockey October 2015 - April 2016</h4>
 <p>Came up with an original idea for a music show and composed weekly playlists to then play live on .org radio. Used studio equipment to transition between talking (backtracking, reading PSAs, etc.) and playing tracks.</p>
 <br>
 <h4>Bailey Blues, Brooklyn, NY, USA</h4>
@@ -121,40 +143,22 @@
 <h4>Korean Studies Graphic Design Intern Summer 2015</h4>
 <p>Designed flyers, postcards, banners and other promotional materials for upcoming programs. Edited videos to then post on department site. Hosted domestic and international guests to ensure time spent at The Korea Society is above satisfactory.</p>
 
+<a href="pdf_files/saphyaresume.pdf" target="_blank"><h4 style="text-align: right">download pdf.</h4></a>
+
 	  </article>
-	  <aside>
+	  	  <aside>
 		<h4>ABOUT ME</h4>
 		<br>
-		<p>Welcome to my site! I am an aspiring music supervisor. My life goal is to work for a game developer and continue to create immersive aural experiences!</p>
+		<p>Saphya is a lover of video games and music, new and old, but especially old. Her fascination with retro pop culture is immortalised in her interactive projects, paying homage to icons and trends of the 20th century, and through her radio show on video game music, <span style="font-style: italic">Press Start</span>.</p>
 		<p>saphya.monet@gmail.com</p>
-		<ul style = "list-style-type: none">
-		  <li id ="pages"><a href="cv.html">Curriculum Vitae</a></li>
-		  <br>
-		  <li id ="pages"><a href="contact.html">Contact</a></li>
-		</ul>
-		<br>
-		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
-      
-          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
-        
-		</a></p>
-		<div style="text-align: center">
-		<p >Download Links:</p>
-		<ul style = "list-style-type: none">
-			<li>CV</li>
-			<li><a href="pdf_files/saphyacv.pdf" target="_blank"><img src="pdflogo.png"></a></li>
-			<li>Resume</li>
-			<li><a href="pdf_files/saphyaresume.pdf" target="_blank"><img src="pdflogo.png"></a></li>
-		</ul>
-		</div>
+		<p><a href="https://github.com/saphya-council">github</a>|<a href="https://www.linkedin.com/in/saphya-council-36a31077/">linkedin</a>|<a href="http://wnyu.org/archives?c=press-start">radio</a></p>
+		
+
 	  </aside>
 	</div>
 	<footer>
-		<p style="text-align: center"><a href="https://cn.linkedin.com/pub/saphya-council/77/310/36a">
-      
-          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Saphya Council's profile on LinkedIn">
-        
-		</a></p>
+		<p><a href="https://github.com/saphya-council">github</a>|<a href="https://www.linkedin.com/in/saphya-council-36a31077/">linkedin</a>|<a href="http://wnyu.org/archives?c=press-start">radio</a></p>
 	</footer>
+
 </body>
 </html>

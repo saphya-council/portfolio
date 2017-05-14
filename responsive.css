@@ -5,7 +5,7 @@
 }
 #main_content{
 	border: solid #A8676B;
-	height: 500px;
+	height: 555px;
 }
 
 
@@ -15,12 +15,12 @@
 }
 
 body {
-  width: 75%;
-  max-width: 960px;
+  width: 85%;
+  max-width: 1160px;
   margin: 0 auto;
   /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
   font-family:monospace;
-  font-size: 12px;
+  font-size: 14px;
   color: #FCFFFF;
   background-color: black;
 }
@@ -78,14 +78,15 @@ nav ul li a:hover {
   background-color: #FFB37E;
 }
 */
-aside {
+#main_content aside {
 	/*border: 1px solid white;*/
   float: left;
   margin-top: 1em;
   margin-left: 1em;
   width: 25%;
-  height:475px;
+  height:555px;
   text-align: left;
+  
 }
 
 aside a{
@@ -109,11 +110,11 @@ aside a{
     display: inline-block;
 }
 
-article {
+#main_content article {
   float: right;
   margin-top: 1em;
   width: 70%;
-  height: 475px;
+  height: 555px;
   text-align: center;
   /*border: 1px solid red;*/
   margin-right: 1em;
@@ -135,7 +136,8 @@ p {
 
 #thumbs {
 	/*border: 1px solid white;*/
-	height: 444px;
+	/*padding-left: 12px;*/
+	height: 475px;
 	float: right;
 	text-align: center;
 	overflow: auto;
@@ -146,9 +148,16 @@ p {
 }
 
 #thumbs img {
-  width: 200px;
+  /*width: 200px;*/
   margin: 1em 1em 1em 1em;
   
+}
+
+.picha:hover, #thumbnails img:hover{
+	cursor: pointer;
+	-webkit-filter: grayscale(1); 
+	filter: gray; 
+	filter: grayscale(1);
 }
 
 #top {
@@ -156,11 +165,11 @@ p {
 }
 
 	
-footer p{
+footer{
 	display: none;
 }
-.w3-modal{z-index:3;display:none;padding-top:100px; bottom: -100; position:fixed;left:0;top:0;width:100%;height:80%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.7)}
-.w3-modal-content{margin:auto;position:relative;padding:0;outline:0;width:600px}
+.w3-modal{z-index:3;display:none;padding-top: 0; bottom: -100; position:fixed;left:0;top:10em;width:100%;height:600px;margin:auto 3em auto 0em;overflow: auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.85)}
+.w3-modal-content{margin:auto;position:relative;padding:0;outline:0;width:900px}
 
 /*
 #thumbs img:nth-child(6n+0) {
@@ -195,7 +204,7 @@ footer p{
 		font-size: 3em;
 	}
 
-	article {
+	/*article {
 		clear: both; 
 		width: 90%;
 		margin-top: 0;
@@ -203,7 +212,7 @@ footer p{
 	aside {
 		display: none;	
 	}
-
+*/
 	header{
 		padding-bottom: 10px;
 		text-align: center;
@@ -215,8 +224,9 @@ footer p{
 	}
 	#menu p{
 		margin-bottom: 0;
+		font-size: 12px;
 	}
-	#downloads, section #nav{
+	/*#downloads, section #nav{
 		padding-top: 5px;
 	}
 	
@@ -232,13 +242,10 @@ footer p{
 		display: inline-block;
 		border-top: 5px;
 		font-size:100%;
-	}
-	#background{
-		height: 400px;
-	}
+	}*/
 
-	.w3-modal{z-index:3;display:none; position:fixed;left:0;top:0;width:100%;height:80%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.7)}
-	.w3-modal-content{margin:auto;position:relative;padding:0;outline:0;width:90%}
+	.w3-modal{z-index:3;display:none; position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.8)}
+	.w3-modal-content{margin:auto;position:relative;padding:0;outline:0;width:90%; }
 	
 	#thumbs img {
 		width: 90%;
@@ -246,27 +253,28 @@ footer p{
 		margin: 0 1em 1em 1em;
 		float: left;
 	}
-
-	#thumbs div div img{
-		width: 80%;
-		height: auto;
-		margin: 0 1em 1em 1em;
-		clear: both;
-	}
 	
 	#thumbs div div p, #thumbs div div h4, #thumbs div div h3 {
 		text-align: left;
 		clear: both;
 	}
 	
-	footer p{
-		padding-top:10px;
+	footer {
 		display:block;
+		text-align: right;
 	}
 	nav ul li {
 		width: 100%;
 		border-right: none;
 		border-bottom: 1px solid #000;
 		clear: both;
+	}
+	#nav, aside {
+		display: none
+	}
+	
+	#main_content article{
+		text-align: left;
+		width: 90%;
 	}
 }
